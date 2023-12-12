@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import './index.scss';
@@ -11,6 +11,10 @@ import Help from './Help';
 
 const Study = () => {
     const [title, setTitle] = useState('личный кабинет');
+
+    useEffect(() => {
+        document.title = 'Startup Study';
+    }, [])
 
     return (
         <div className='app'>

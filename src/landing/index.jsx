@@ -13,6 +13,10 @@ import decor4 from '../assets/decor4.png';
 import Partners from './Partners';
 
 const Landing = () => {
+  useEffect(() => {
+    document.title = 'Integra Study';
+  }, []);
+
   return (
     <div className="landing">
       <Header />
